@@ -38,7 +38,7 @@ df<- df %>%
              )
 
 
-write_csv(df,"/Users/shivaninaik/Documents/MSDAE/Data Visualisation/World Project/www/final_csv.csv")
+write_csv(df,"www/final_csv.csv")
 
 model <- lm(`Population, total`~`Life expectancy at birth, total (years)`, df)
 DataModel <- mutate(ungroup(df),mod_pred = predict(model),mod_resid = resid(model))
